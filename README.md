@@ -5,6 +5,10 @@ talk, release, and your words are typed into whatever app you're using. Speech i
 transcribed on your own PC. Optional AI polish can reformat selected text with local
 rules/Ollama or a cloud provider you explicitly choose.
 
+Game mode keeps casual places casual: matching games, DMs, comments, and search
+boxes can use lowercase one-line output plus separate shortcuts like `brb`, `omw`,
+`np`, `inv`, `wtb`, and `lfg`.
+
 ## Download
 
 **[Get the latest REMsound for Windows here ->](../../releases/latest)**
