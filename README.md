@@ -24,3 +24,18 @@ then it's fully offline.
 - A microphone
 
 *This repository hosts release downloads only.*
+
+---
+
+<details>
+<summary>Maintainer notes (release process)</summary>
+
+- Built from the private source repo (`lJazzpahlol/REMsound`) — see its
+  `ARCHITECTURE.md` for the full packaging recipe (bundled Python runtime,
+  bytecode-only app, sanitized config).
+- The zip asset is **always named `REMsound-win64.zip`** so the
+  `/releases/latest/download/REMsound-win64.zip` URL used by the website
+  (remsound-website → Vercel) never breaks. Versions live in the tag (vX.Y.Z).
+- Publish: `gh release create vX.Y.Z REMsound-win64.zip --repo lJazzpahlol/remsound-download --title "REMsound X.Y"`.
+
+</details>
