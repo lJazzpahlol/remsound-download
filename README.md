@@ -52,12 +52,15 @@ local fallback.
   `ARCHITECTURE.md` for the full packaging recipe (bundled Python runtime,
   bytecode-only app, sanitized config).
 - The zip asset is **always named `REMsound-win64.zip`** so the
-  `/releases/latest/download/REMsound-win64.zip` URL used by the website and app
-  updater never breaks. Versions live in the tag (vX.Y.Z).
-- Publish: `gh release create vX.Y.Z REMsound-win64.zip --repo lJazzpahlol/remsound-download --title "REMsound X.Y"`.
+  `/releases/latest/download/REMsound-win64.zip` URL used by the website never
+  breaks. Versions live in the tag (vX.Y.Z).
+- REMsound also publishes **`REMsound-patch-win64.zip`** for app-only updates.
+  Installed copies prefer the patch asset automatically and fall back to the
+  full zip if the patch is missing or fails.
+- Publish: `gh release create vX.Y.Z REMsound-win64.zip REMsound-patch-win64.zip --repo lJazzpahlol/remsound-download --title "REMsound X.Y"`.
 
 </details>
 
 ## Updates
 
-REMsound checks for new versions on launch and tells you on the HUD. Install in one step from the tray icon: right-click, then "Install latest update" - REMsound downloads the new build and restarts itself. Your settings, hotkeys, and history are kept.
+REMsound checks for new versions on launch and tells you on the HUD. Install in one step from the tray icon or Control Deck: REMsound downloads the selected package, restarts itself, and keeps your settings, hotkeys, and history. Normal app-only fixes use the small patch zip; full CUDA/runtime updates use the full zip.
