@@ -52,3 +52,7 @@ normal dictation works offline.
 - Publish: `gh release create vX.Y.Z REMsound-win64.zip --repo lJazzpahlol/remsound-download --title "REMsound X.Y"`.
 
 </details>
+
+## Updates
+
+REMsound checks for new versions on launch and tells you on the HUD. Install in one step from the tray icon: right-click, then "Install latest update" - REMsound downloads the new build and restarts itself. Your settings, hotkeys, and history are kept.
