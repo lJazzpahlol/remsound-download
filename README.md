@@ -2,7 +2,8 @@
 
 **Local-first voice dictation for Windows.** Hold a key or click the floating orb,
 talk, release, and your words are typed into whatever app you're using. Speech is
-transcribed on your own PC. Optional AI polish can reformat selected text with local
+transcribed on your own PC by default, with optional CUDA acceleration when your
+system can load it. Optional AI polish can reformat selected text with local
 rules/Ollama or a cloud provider you explicitly choose.
 
 Game mode keeps casual places casual: matching games, DMs, comments, and search
@@ -21,12 +22,16 @@ boxes can use lowercase one-line output plus separate shortcuts like `brb`, `omw
 > Windows SmartScreen will warn once because the app is not code-signed.
 > Click **More info -> Run anyway**.
 
-The first dictation downloads the speech model (~75 MB) one time only. After that,
-normal dictation works offline.
+The first local dictation downloads the speech model (~75 MB) one time only. After
+that, normal local dictation works offline. The settings deck also includes an
+optional Gemini transcription engine for people who want cloud transcription with
+local fallback.
 
 ## Privacy
 
-- Microphone audio never leaves your computer.
+- Microphone audio never leaves your computer when the local engine is selected.
+- Optional Gemini transcription sends recorded audio clips to Gemini only when you
+  explicitly select the Gemini transcription engine and provide an API key.
 - Optional cloud polish sends only the text you choose to reformat, never audio.
 - Optional update checks only query GitHub Releases for the latest public version.
 - API keys and personal shortcuts live in your local `config.json`, not in this repo.
