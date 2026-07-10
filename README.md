@@ -6,6 +6,10 @@ transcribed on your own PC by default, with optional CUDA acceleration when your
 system can load it. Optional AI polish can reformat selected text with local
 rules/Ollama or a cloud provider you explicitly choose.
 
+There's also a dedicated **command key**: hold it and speak voice commands only —
+chain as many as you like in one breath ("open notepad, open my email, then select
+all") and they run in order without ever typing text.
+
 Game mode keeps casual places casual: matching games, DMs, comments, and search
 boxes can use lowercase one-line output plus separate shortcuts like `brb`, `omw`,
 `np`, `inv`, `wtb`, and `lfg`.
