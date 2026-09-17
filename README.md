@@ -14,7 +14,11 @@ Game mode keeps casual places casual: matching games, DMs, comments, and search
 boxes can use lowercase one-line output plus separate shortcuts like `brb`, `omw`,
 `np`, `inv`, `wtb`, and `lfg`.
 
-**New in v1.7.22:** a dedicated **World of Warcraft chat toggle** lets you dictate
+**New in v1.7.23:** WoW chat uses a separate local CPU speech model by default to
+reduce long processing waits caused by competing with the game for GPU resources.
+Your normal dictation model, hotkeys, settings, and history are preserved.
+
+The dedicated **World of Warcraft chat toggle** lets you dictate
 directly into an open WoW chat box using its own keybind and the regular listening
 HUD. REMsound types your words without pressing Enter.
 
@@ -31,6 +35,12 @@ HUD. REMsound types your words without pressing Enter.
 Typing stops if WoW loses focus. If characters are missed, increase **Game Mode →
 WoW typing delay** (default 10 ms per character). This mode keeps text on one line
 and treats spoken commands such as "press enter" as text.
+
+In **Game Mode → WoW CPU model**, choose **Base** for speed or **Small** for more
+accuracy. The separate model is prepared in the background when the WoW hotkey is
+enabled and downloads once if needed. Smaller models may be less accurate than
+your normal large model. Turn off **Use a separate CPU model for WoW** to use your
+normal transcription engine instead.
 
 ## Download
 
