@@ -14,6 +14,24 @@ Game mode keeps casual places casual: matching games, DMs, comments, and search
 boxes can use lowercase one-line output plus separate shortcuts like `brb`, `omw`,
 `np`, `inv`, `wtb`, and `lfg`.
 
+**New in v1.7.22:** a dedicated **World of Warcraft chat toggle** lets you dictate
+directly into an open WoW chat box using its own keybind and the regular listening
+HUD. REMsound types your words without pressing Enter.
+
+### Set up WoW chat dictation
+
+1. In **Control Deck → Hotkeys & Model**, set **World of Warcraft chat toggle**
+   and click **Save & Apply**. It starts blank. Pick a spare key that does not
+   overlap another REMsound hotkey or a key you need for typing/gameplay.
+2. Open WoW's chat box and click its input, then press your chosen key, speak,
+   and press it again to finish.
+3. Keep the same WoW window focused while the transcript appears. Review it and
+   send it yourself. REMsound does not open chat or press Enter.
+
+Typing stops if WoW loses focus. If characters are missed, increase **Game Mode →
+WoW typing delay** (default 10 ms per character). This mode keeps text on one line
+and treats spoken commands such as "press enter" as text.
+
 ## Download
 
 **[Get the latest REMsound for Windows here ->](../../releases/latest)**
