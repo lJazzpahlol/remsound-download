@@ -14,9 +14,7 @@ Game mode keeps casual places casual: matching games, DMs, comments, and search
 boxes can use lowercase one-line output plus separate shortcuts like `brb`, `omw`,
 `np`, `inv`, `wtb`, and `lfg`.
 
-**New in v1.7.23:** WoW chat uses a separate local CPU speech model by default to
-reduce long processing waits caused by competing with the game for GPU resources.
-Your normal dictation model, hotkeys, settings, and history are preserved.
+**New in v1.7.24:** Optional Groq Whisper transcription with a small CPU backup, a one-click setup preset, and visible cloud-error notices. Keep speech-model memory off your GPU while preserving existing local settings and hotkeys.
 
 The dedicated **World of Warcraft chat toggle** lets you dictate
 directly into an open WoW chat box using its own keybind and the regular listening
@@ -96,3 +94,18 @@ local fallback.
 ## Updates
 
 REMsound checks for new versions on launch and tells you on the HUD. Install in one step from the tray icon or Control Deck: REMsound downloads the selected package, restarts itself, and keeps your settings, hotkeys, and history. Normal app-only fixes use the small patch zip; full CUDA/runtime updates use the full zip.
+
+# Groq transcription
+
+## Groq dictation (v1.7.24)
+
+1. Create a private REMsound API key at https://console.groq.com/keys (Groq, not Grok/xAI).
+2. Update REMsound, then open Control Deck > Hotkeys & Model > Transcription engine.
+3. Click **Use Groq + CPU backup**, paste the key in **Groq API key**, and click **Save & Apply**. This explicitly enables uploads of dictation clips to Groq.
+4. Quit and reopen REMsound once to release GPU memory held by the previous local model.
+5. Dictate a short test into a text editor. The status should show groq / cloud and whisper-large-v3-turbo.
+
+Wake-word detection stays local on CPU. Cloud backup uses a separate small CPU/int8 model, never the main CUDA model. Missing keys, network errors and account limits show a settings notice and use CPU backup when enabled. Turning backup off reports the failure instead. Existing hotkeys, WoW CPU chat and local model preferences are preserved. Select Local Whisper to return to your previous local model. No API subscription is bundled; the provider bills your account. Keys stay in your local config and must never be shared.
+
+Groq uploads 16 kHz mono WAV clips; recordings above 24 MiB fall back locally. English translation uses Whisper Large V3 because Turbo does not support that endpoint. CPU backup may be less accurate than large-v3, and cloud latency depends on your connection. Test accuracy with your voice before relying on the new engine.
+
