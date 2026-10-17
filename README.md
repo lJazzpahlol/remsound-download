@@ -14,7 +14,7 @@ Game mode keeps casual places casual: matching games, DMs, comments, and search
 boxes can use lowercase one-line output plus separate shortcuts like `brb`, `omw`,
 `np`, `inv`, `wtb`, and `lfg`.
 
-**New in v1.7.24:** Optional Groq Whisper transcription with a small CPU backup, a one-click setup preset, and visible cloud-error notices. Keep speech-model memory off your GPU while preserving existing local settings and hotkeys.
+**New in v1.7.29:** A Listening Pill tab in the Control Deck. Choose where the LISTENING pill appears (any corner, edge, or the center), how big it is, and its colours, then click Save & Preview to see it. Changes apply instantly with no restart.
 
 The dedicated **World of Warcraft chat toggle** lets you dictate
 directly into an open WoW chat box using its own keybind and the regular listening
